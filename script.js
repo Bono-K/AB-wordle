@@ -14,6 +14,7 @@ const targetWords = [
   "picos",
   "email",
   "slack",
+  "codon",
 
   "aalii",
   "aargh",

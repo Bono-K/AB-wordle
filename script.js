@@ -61,7 +61,7 @@ const targetWords = [
   "flask" 
 ]
 
-const targetWords = [
+const winMessages = [
   "Gotta wear PPE in the lab!",
   "Samples brimming with information",
   "Grab those target genes!",

@@ -543,6 +543,7 @@ const dictionary = [
   "apgar",
   "aphis",
   "apian",
+  "totem",
   "apiol",
   "apish",
   "apism",

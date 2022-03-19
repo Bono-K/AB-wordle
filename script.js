@@ -13112,7 +13112,6 @@ const offsetFromDate = new Date(March 18, 2022)
 const msOffset = Date.now() - offsetFromDate
 const dayOffset = msOffset / 1000 / 60 / 60 / 24
 const targetWord = targetWords[Math.floor(dayOffset)]
-const winMessage = winMessages[Math.floor(dayOffset)]
 
 startInteraction()
 

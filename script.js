@@ -15,6 +15,12 @@ const targetWords = [
   "email",
   "slack",
   "codon",
+  "asset",
+  "bravo",
+  "water",
+  "timer",
+  "slide",
+  "flask",
 ]
 const dictionary = [
   "aahed",

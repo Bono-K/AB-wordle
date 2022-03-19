@@ -61,15 +61,6 @@ const targetWords = [
   "flask",
 ]
 
-const winMessages = [
-  "Gotta wear PPE in the lab!",
-  "Samples brimming with information",
-  "Grab those target genes!",
-  "Keep an eye out for mutations",
-  "A confounding factor at CBO analysis",
-  "Tissue suspended in a parafilm block",
-]
-
 const dictionary = [
    "glove",
   "blood",

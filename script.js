@@ -10737,7 +10737,6 @@ const dictionary = [
   "bleed",
   "delta",
   "flick",
-  "totem",
   "wooer",
   "front",
   "shrub",

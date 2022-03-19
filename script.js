@@ -12,6 +12,7 @@ const targetWords = [
   "marty",
   "tapes",
   "picos",
+  "ribos",
   "email",
   "slack",
   "codon",
@@ -28,7 +29,47 @@ const targetWords = [
   "sperm",
   "qubit",
   "ruler",
+  "dnase",
+  "helix",
+  "dimer",
+  "lysis",
+  "probe",
+  "histo",
+  "zebra",
+  "bench",
+  "beads",
+  "veeva",
+  "coats",
+  "batch",
+  "petri",
+  "hoods",
+  "blank",
+  "waste",
+  "beats",
+  "stain",
+  "vital",
+  "mixes",
+  "aamls",
+  "exact",
+  "yield",
+  "tests",
+  "quant",
+  "swabs",
+  "draws",
+  "inbox",
+  "smear",
+  "flask" 
 ]
+
+const targetWords = [
+  "Gotta wear PPE in the lab!",
+  "Samples brimming with information",
+  "Grab those target genes!",
+  "Keep an eye out for mutations",
+  "A confounding factor at CBO analysis",
+  "Tissue suspended in a parafilm block",
+]
+
 const dictionary = [
   "aahed",
   "aalii",
@@ -13013,6 +13054,7 @@ const offsetFromDate = new Date(2022, 3, 18)
 const msOffset = Date.now() - offsetFromDate
 const dayOffset = msOffset / 1000 / 60 / 60 / 24
 const targetWord = targetWords[Math.floor(dayOffset)]
+const winMessage = winMessages[3]
 
 startInteraction()
 
@@ -13235,7 +13277,8 @@ function shakeTiles(tiles) {
 
 function checkWinLose(guess, tiles) {
   if (guess === targetWord) {
-    showAlert("You Win", 5000)
+    showAlert("Great job!", 5000)
+    showAlert(winMessage, 5000)
     danceTiles(tiles)
     stopInteraction()
     return

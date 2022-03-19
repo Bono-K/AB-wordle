@@ -21,6 +21,13 @@ const targetWords = [
   "timer",
   "slide",
   "flask",
+  "hiseq",
+  "scale",
+  "myone",
+  "badge",
+  "sperm",
+  "qubit",
+  "ruler",
 ]
 const dictionary = [
   "aahed",

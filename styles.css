@@ -85,7 +85,7 @@ body {
 
 .no-letter-guess-grid {
   display: grid;
-  justify-content: bottom;
+  justify-content: center;
   align-content: center;
   flex-grow: 1;
   grid-template-columns: repeat(5, 2em);

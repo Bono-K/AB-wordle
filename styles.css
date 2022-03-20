@@ -86,11 +86,11 @@ body {
 .no-letter-guess-grid {
   display: grid;
   justify-content: center;
-  align-content: left;
+  align-content: center;
   flex-grow: 1;
   grid-template-columns: repeat(5, 2em);
   grid-template-rows: repeat(6, 2em);
-  gap: .25em;
+  gap: .1em;
   margin-bottom: 1em;
 }
 

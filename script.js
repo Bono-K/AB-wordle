@@ -13237,6 +13237,7 @@ function submitGuess() {
 	if (activeTiles.length !== WORD_LENGTH) {
 		showAlert('Not enough letters')
 		shakeTiles(activeTiles)
+		shakeTiles(activeNoLetterTiles)
 		return
 	}
 

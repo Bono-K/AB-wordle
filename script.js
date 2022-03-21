@@ -13342,8 +13342,6 @@ function flipTile(tile, index, array, guess, className) {
 	setTimeout(() => {
 		tile.classList.add('flip')
 	}, (index * FLIP_ANIMATION_DURATION) / 2)
-
-
 	
 	tile.addEventListener(
 		'transitionend',

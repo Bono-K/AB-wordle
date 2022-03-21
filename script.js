@@ -13233,7 +13233,7 @@ function deleteKey() {
 
 function submitGuess() {
 	const activeTiles = [...getActiveTiles()]
-	const activeNoLetterTiles = getActiveNoLetterTiles()
+	const activeNoLetterTiles = [...getActiveNoLetterTiles()]
 	if (activeTiles.length !== WORD_LENGTH) {
 		showAlert('Not enough letters')
 		shakeTiles(activeTiles)

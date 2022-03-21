@@ -13362,10 +13362,6 @@ function getActiveTiles() {
   return guessGrid.querySelectorAll('[data-state="active"]')
 }
 
-function getActiveNoLetterTiles() {
-  return noLetterGuessGrid.querySelectorAll('[data-state="active"]')
-}
-
 function showAlert(message, duration = 1000) {
   const alert = document.createElement("div")
   alert.textContent = message

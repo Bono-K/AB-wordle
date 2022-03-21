@@ -213,10 +213,10 @@ body {
   justify-content: center;
   align-content: center;
   flex-grow: 1;
+  grid-template-columns: repeat(5, 1.5em);
+  grid-template-rows: repeat(6, 1.5em);
   gap: .05em;
-  grid-template-columns: repeat(5, 2em);
-  grid-template-rows: repeat(6, 2em);
-  margin-bottom: .05em;
+  margin-bottom: 0.05em;
 }
 
 .noLetterTile {

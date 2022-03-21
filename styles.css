@@ -220,7 +220,8 @@ body {
 }
 
 .noLetterTile {
-  border: .05em solid hsl(20, 2%, 23%);
+  font-size: 2em;
+  border: .05em solid hsl(240, 2%, 23%);
   text-transform: uppercase;
   font-weight: bold;
   display: flex;
@@ -229,4 +230,24 @@ body {
   user-select: none;
   transition: transform 250ms linear;
 }
+
+.noLetterTile[data-state="active"] {
+  border-color: hsl(200, 1%, 34%);
+}
+
+.noLetterTile[data-state="wrong"] {
+  border: none;
+  background-color: hsl(240, 2%, 23%);
+}
+
+.noLetterTile[data-state="wrong-location"] {
+  border: none;
+  background-color: hsl(49, 51%, 47%);
+}
+
+.noLetterTile[data-state="correct"] {
+  border: none;
+  background-color: hsl(115, 29%, 43%);
+}
+
 

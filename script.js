@@ -13338,7 +13338,6 @@ function submitGuess() {
 function flipTile(tile, index, array, guess, className) {
 	const letter = tile.dataset.letter
 	const key = keyboard.querySelector(`[data-key="${letter}"i]`)
-	const activeNoLetterTiles = getActiveNoLetterTiles()
 
 	setTimeout(() => {
 		tile.classList.add('flip')
@@ -13373,20 +13372,6 @@ function flipTile(tile, index, array, guess, className) {
 
 const noLetterTile = Object.assign(activeNoLetterTiles, tile);
 
-function flipNoLetterTile(noLetterTile, index, array, guess, className) {
-
-			if (index === array.length - 1) {
-				noLetterTile.addEventListener(
-					'transitionend',
-					() => {
-						startInteraction()
-						checkWinLose(guess, array)
-					},
-					{ once: true }
-
-				)
-			}
-}
 
 //function flipNoLetterTile(noLetterTile, index, array, guess, className) {
 //	const letter = noLetterTile.dataset.letter

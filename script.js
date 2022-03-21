@@ -13163,7 +13163,7 @@ const guessGrid = document.querySelector("[data-guess-grid]")
 const noLetterGuessGrid = document.querySelector("[data-noLetterGuessGrid]")
 const offsetFromDate = new Date(2022, 2, 1)
 const msOffset = Date.now() - offsetFromDate
-const dayOffset = msOffset / 1000 / 60 / 60 / 24
+const dayOffset = msOffset / 1000 / 60 / 60 / 12
 const targetWord = targetWords[Math.floor(dayOffset)]
 const winMessage = winMessages[Math.floor(dayOffset)]
 
@@ -13332,6 +13332,8 @@ function submitGuess() {
 function flipTile(tile, index, array, guess, className) {
 	const letter = tile.dataset.letter
 	const key = keyboard.querySelector(`[data-key="${letter}"i]`)
+	const activeNoLetterTiles = getActiveNoLetterTiles()
+
 	setTimeout(() => {
 		tile.classList.add('flip')
 	}, (index * FLIP_ANIMATION_DURATION) / 2)

@@ -13282,7 +13282,6 @@ function submitGuess() {
 		// The letter is correct
 		if (targetWord[i] === guess[i]) {
 			classDictionary[i + 1] = 'correct'
-			activeNoLetterTiles.dataset.state[i] = 'correct'
 
 			matchingChars = matchingChars + letter
 			continue

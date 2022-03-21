@@ -13372,7 +13372,7 @@ function flipTile(tile, index, array, guess, className) {
 
 
 	
-function flipNoLetterTile(noLetterTile, tile, index, array, guess, className) {
+function flipNoLetterTile(noLetterTile, className) {
 	noLetterTile.dataset.state = className
 }
 

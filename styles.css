@@ -249,8 +249,3 @@ body {
   border: none;
   background-color: hsl(115, 29%, 43%);
 }
-
-.noLetterTile.flip {
-  transform: rotateX(90deg);
-}
-

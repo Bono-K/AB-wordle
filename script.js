@@ -13329,7 +13329,7 @@ function submitGuess() {
 		flipTile(value, index, array, guess, classDictionary[index + 1])
 	})
 	activeNoLetterTiles.forEach((value, index, array) => {
-		flipNoLetterTile(value, index, array, guess, classDictionary[index + 1])
+		flipNoLetterTile(tile, value, index, array, guess, classDictionary[index + 1])
 	})
 
 }

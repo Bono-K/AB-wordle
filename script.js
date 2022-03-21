@@ -13160,7 +13160,7 @@ const DANCE_ANIMATION_DURATION = 500
 const keyboard = document.querySelector("[data-keyboard]")
 const alertContainer = document.querySelector("[data-alert-container]")
 const guessGrid = document.querySelector("[data-guess-grid]")
-// const noLetterGuessGrid = document.querySelector("[data-noLetterGuessGrid]")
+const noLetterGuessGrid = document.querySelector("[data-noLetterGuessGrid]")
 const offsetFromDate = new Date(2022, 2, 1)
 const msOffset = Date.now() - offsetFromDate
 const dayOffset = msOffset / 1000 / 60 / 60 / 24
@@ -13364,9 +13364,9 @@ function getActiveTiles() {
 }
 
 
-//function getActiveNoLetterTiles() {
-//  return noLetterGuessGrid.querySelectorAll('[data-state="active"]')
-//}
+function getActiveNoLetterTiles() {
+  return noLetterGuessGrid.querySelectorAll('[data-state="active"]')
+}
 
 
 function showAlert(message, duration = 1000) {

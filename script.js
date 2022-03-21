@@ -1,4 +1,4 @@
-const targetWords = [
+aconst targetWords = [
   "glove",
   "blood",
   "baits",
@@ -13330,6 +13330,7 @@ function submitGuess() {
 	})
 	activeNoLetterTiles.forEach((value, index, array) => {
 		flipNoLetterTile(tile, value, index, array, guess, classDictionary[index + 1])
+	const activeNoLetterTile = Object.assign(activeNoLetterTiles, activeTiles)
 	})
 
 }
@@ -13370,7 +13371,6 @@ function flipTile(tile, index, array, guess, className) {
 }
 
 
-const activeNoLetterTile = Object.assign(activeNoLetterTiles, activeTiles);
 
 	
 function flipNoLetterTile(noLetterTile, tile, index, array, guess, className) {

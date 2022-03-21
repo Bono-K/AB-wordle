@@ -13330,7 +13330,6 @@ function submitGuess() {
 	})
 	activeNoLetterTiles.forEach((value, index, array) => {
 		flipNoLetterTile(tile, value, index, array, guess, classDictionary[index + 1])
-	const activeNoLetterTiles = Object.assign(activeNoLetterTiles, activeTiles)
 	})
 
 }

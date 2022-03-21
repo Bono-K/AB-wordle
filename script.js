@@ -13154,6 +13154,7 @@ const dictionary = [
   "rural",
   "shave",
 ]
+
 const WORD_LENGTH = 5
 const FLIP_ANIMATION_DURATION = 500
 const DANCE_ANIMATION_DURATION = 500
@@ -13231,14 +13232,9 @@ function deleteKey() {
   delete lastTile.dataset.letter
 }
 
-
-
-
-
-
-
 function submitGuess() {
 	const activeTiles = [...getActiveTiles()]
+	const activeNoLetterTiles = [...getActiveNoLetterTiles()]
 	if (activeTiles.length !== WORD_LENGTH) {
 		showAlert('Not enough letters')
 		shakeTiles(activeTiles)
@@ -13333,19 +13329,23 @@ function submitGuess() {
 	activeTiles.forEach((value, index, array) => {
 		flipTile(value, index, array, guess, classDictionary[index + 1])
 	})
+	activeNoLetterTiles.forEach((value, index, array) => {
+		flipNoLetterTile(value, index, array, guess, classDictionary[index + 1])
+	})
 
 }
-
 
 
 function flipTile(tile, index, array, guess, className) {
 	const letter = tile.dataset.letter
 	const key = keyboard.querySelector(`[data-key="${letter}"i]`)
 //	const activeNoLetterTiles = [...getActiveNoLetterTiles()]
-
+	
 	setTimeout(() => {
 		tile.classList.add('flip')
 	}, (index * FLIP_ANIMATION_DURATION) / 2)
+
+
 	
 	tile.addEventListener(
 		'transitionend',
@@ -13371,10 +13371,6 @@ function flipTile(tile, index, array, guess, className) {
 		{ once: true }
 	)
 }
-
-
-
-
 
 
 function getActiveTiles() {
@@ -13446,4 +13442,3 @@ function danceTiles(tiles) {
     }, (index * DANCE_ANIMATION_DURATION) / 5)
   })
 }
-

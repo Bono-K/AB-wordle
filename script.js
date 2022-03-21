@@ -13381,32 +13381,6 @@ const noLetterTile = Object.assign(activeNoLetterTiles, tile);
 //	}, (index * FLIP_ANIMATION_DURATION) / 2)
 
 
-	
-	noLetterTile.addEventListener(
-		'transitionend',
-		() => {
-			noLetterTile.classList.remove('flip')
-
-			noLetterTile.dataset.state = className
-			key.classList.add(className)
-
-			if (index === array.length - 1) {
-				noLetterTile.addEventListener(
-					'transitionend',
-					() => {
-						startInteraction()
-						checkWinLose(guess, array)
-					},
-					{ once: true }
-
-				)
-			}
-		},
-		{ once: true }
-	)
-}
-
-
 
 function getActiveTiles() {
   return guessGrid.querySelectorAll('[data-state="active"]')

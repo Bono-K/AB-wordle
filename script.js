@@ -13330,7 +13330,10 @@ function flipTile(tile, index, array, guess, className) {
 	setTimeout(() => {
 		tile.classList.add('flip')
 	}, (index * FLIP_ANIMATION_DURATION) / 2)
+		no-letter-tile.classList.add('flip')
+	}, (index * FLIP_ANIMATION_DURATION) / 2)
 
+	
 	tile.addEventListener(
 		'transitionend',
 		() => {
@@ -13347,23 +13350,6 @@ function flipTile(tile, index, array, guess, className) {
 						checkWinLose(guess, array)
 					},
 					{ once: true }
-				)
-			}
-		},
-		{ once: true }
-	)
-}
-
-function flipNoLetterTile(no-letter-tile, index, array, guess, className) {
-	const letter = tile.dataset.letter
-	const key = keyboard.querySelector(`[data-key="${letter}"i]`)
-	setTimeout(() => {
-		tile.classList.add('flip')
-	}, (index * FLIP_ANIMATION_DURATION) / 2)
-
-	no-letter-tile.addEventListener(
-		'transitionend',
-		() => {
 			no-letter-tile.classList.remove('flip')
 
 			no-letter-tile.dataset.state = className
@@ -13377,6 +13363,7 @@ function flipNoLetterTile(no-letter-tile, index, array, guess, className) {
 						checkWinLose(guess, array)
 					},
 					{ once: true }
+
 				)
 			}
 		},

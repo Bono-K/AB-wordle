@@ -13452,4 +13452,3 @@ function danceTiles(tiles) {
   })
 }
 
-noLetterTile.classlist.add(

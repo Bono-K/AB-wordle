@@ -250,7 +250,7 @@ body {
   background-color: hsl(115, 29%, 43%);
 }
 
-.moLetterTile.flip {
+.noLetterTile.flip {
   transform: rotateX(90deg);
 }
 

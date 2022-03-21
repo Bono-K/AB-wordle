@@ -13231,9 +13231,14 @@ function deleteKey() {
   delete lastTile.dataset.letter
 }
 
+
+
+
+
+
+
 function submitGuess() {
 	const activeTiles = [...getActiveTiles()]
-	const activeNoLetterTiles = [...getActiveNoLetterTiles()]
 	if (activeTiles.length !== WORD_LENGTH) {
 		showAlert('Not enough letters')
 		shakeTiles(activeTiles)
@@ -13328,16 +13333,15 @@ function submitGuess() {
 	activeTiles.forEach((value, index, array) => {
 		flipTile(value, index, array, guess, classDictionary[index + 1])
 	})
-	activeNoLetterTiles.forEach((value, index, array) => {
-		flipNoLetterTile(tile, value, index, array, guess, classDictionary[index + 1])
-	})
 
 }
+
 
 
 function flipTile(tile, index, array, guess, className) {
 	const letter = tile.dataset.letter
 	const key = keyboard.querySelector(`[data-key="${letter}"i]`)
+	const activeNoLetterTiles = [...getActiveNoLetterTiles()]
 
 	setTimeout(() => {
 		tile.classList.add('flip')
@@ -13350,7 +13354,7 @@ function flipTile(tile, index, array, guess, className) {
 
 			tile.dataset.state = className
 			key.classList.add(className)
-			noLetterTile.dataset.state = classname
+			activeNoLetterTiles.dataset.state = classname
 
 			if (index === array.length - 1) {
 				tile.addEventListener(

@@ -13354,6 +13354,37 @@ function flipTile(tile, index, array, guess, className) {
 	)
 }
 
+function flipNoTextTile(noTextTile, index, array, guess, className) {
+	const letter = tile.dataset.letter
+	const key = keyboard.querySelector(`[data-key="${letter}"i]`)
+	setTimeout(() => {
+		tile.classList.add('flip')
+	}, (index * FLIP_ANIMATION_DURATION) / 2)
+
+	tile.addEventListener(
+		'transitionend',
+		() => {
+			tile.classList.remove('flip')
+
+			tile.dataset.state = className
+			key.classList.add(className)
+
+			if (index === array.length - 1) {
+				tile.addEventListener(
+					'transitionend',
+					() => {
+						startInteraction()
+						checkWinLose(guess, array)
+					},
+					{ once: true }
+				)
+			}
+		},
+		{ once: true }
+	)
+}
+
+
 function getActiveTiles() {
   return guessGrid.querySelectorAll('[data-state="active"]')
 }

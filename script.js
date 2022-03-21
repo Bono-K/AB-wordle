@@ -13363,7 +13363,7 @@ function flipTile(tile, index, array, guess, className) {
 }
 
 function flipNoLetterTile(noLetterTile, index, array, guess, className) {
-	const letter = noLetterTile.dataset.letter
+	const letter = moLetterTile.dataset.letter
 	const key = keyboard.querySelector(`[data-key="${letter}"i]`)
 	setTimeout(() => {
 		noLetterTile.classList.add('flip')

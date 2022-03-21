@@ -13370,7 +13370,7 @@ function flipTile(tile, index, array, guess, className) {
 }
 
 
-const activeNoLetterTile = Object.assign(activeNoLetterTiles, tile);
+const activeNoLetterTile = Object.assign(activeNoLetterTiles, activeTiles);
 
 	
 //function flipNoLetterTile(noLetterTile, index, array, guess, className) {

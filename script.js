@@ -13244,6 +13244,11 @@ function submitGuess() {
 		return word + tile.dataset.letter
 	}, '')
 
+	const noLetterGuess = activeNoLetterTiles.reduce((word, noLetterTile) => {
+		return word + noLetterTile.dataset.letter
+	}, '')
+
+	
 	if (!dictionary.includes(guess)) {
 		showAlert('Not in word list')
 		shakeTiles(activeTiles)

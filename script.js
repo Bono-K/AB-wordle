@@ -13234,7 +13234,6 @@ function deleteKey() {
 function submitGuess() {
 	const activeTiles = [...getActiveTiles()]
 	const activeNoLetterTiles = getActiveNoLetterTiles()
-
 	if (activeTiles.length !== WORD_LENGTH) {
 		showAlert('Not enough letters')
 		shakeTiles(activeTiles)
@@ -13364,7 +13363,7 @@ function flipTile(tile, index, array, guess, className) {
 }
 
 function flipNoLetterTile(noLetterTile, index, array, guess, className) {
-	const letter = tile.dataset.letter
+	const letter = noLetterTile.dataset.letter
 	const key = keyboard.querySelector(`[data-key="${letter}"i]`)
 	setTimeout(() => {
 		noLetterTile.classList.add('flip')

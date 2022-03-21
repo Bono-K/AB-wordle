@@ -90,7 +90,6 @@ body {
   flex-grow: 1;
   grid-template-columns: repeat(5, 2em);
   grid-template-rows: repeat(6, 2em);
-  gap: .05em;
   margin-bottom: .05em;
 }
 

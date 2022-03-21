@@ -13371,12 +13371,16 @@ function flipTile(tile, index, array, guess, className) {
 	)
 }
 
-function flipNoLetterTile(noLetterTile, index, array, guess, className) {
-	const letter = noLetterTile.dataset.letter
-	const key = keyboard.querySelector(`[data-key="${letter}"i]`)
-	setTimeout(() => {
-		noLetterTile.classList.add('flip')
-	}, (index * FLIP_ANIMATION_DURATION) / 2)
+
+const noLetterTile = Object.assign(noLetterTile, tile);
+
+
+//function flipNoLetterTile(noLetterTile, index, array, guess, className) {
+//	const letter = noLetterTile.dataset.letter
+//	const key = keyboard.querySelector(`[data-key="${letter}"i]`)
+//	setTimeout(() => {
+//		noLetterTile.classList.add('flip')
+//	}, (index * FLIP_ANIMATION_DURATION) / 2)
 
 
 	

@@ -13361,16 +13361,16 @@ function flipNoLetterTile(no-letter-tile, index, array, guess, className) {
 		tile.classList.add('flip')
 	}, (index * FLIP_ANIMATION_DURATION) / 2)
 
-	tile.addEventListener(
+	no-letter-tile.addEventListener(
 		'transitionend',
 		() => {
-			tile.classList.remove('flip')
+			no-letter-tile.classList.remove('flip')
 
-			tile.dataset.state = className
+			no-letter-tile.dataset.state = className
 			key.classList.add(className)
 
 			if (index === array.length - 1) {
-				tile.addEventListener(
+				no-letter-tile.addEventListener(
 					'transitionend',
 					() => {
 						startInteraction()
@@ -13387,6 +13387,10 @@ function flipNoLetterTile(no-letter-tile, index, array, guess, className) {
 
 function getActiveTiles() {
   return guessGrid.querySelectorAll('[data-state="active"]')
+}
+
+function getActiveNoLetterTiles() {
+  return noLetterGuessGrid.querySelectorAll('[data-state="active"]')
 }
 
 function showAlert(message, duration = 1000) {

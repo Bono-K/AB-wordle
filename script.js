@@ -13237,7 +13237,6 @@ function submitGuess() {
 	if (activeTiles.length !== WORD_LENGTH) {
 		showAlert('Not enough letters')
 		shakeTiles(activeTiles)
-		shakeTiles(activeNoLetterTiles)
 		return
 	}
 
@@ -13334,6 +13333,8 @@ function submitGuess() {
 	})
 
 }
+
+const noLetterTile = Object.assign(noLetterTile, tile);
 
 function flipTile(tile, index, array, guess, className) {
 	const letter = tile.dataset.letter
@@ -13474,3 +13475,5 @@ function danceTiles(tiles) {
     }, (index * DANCE_ANIMATION_DURATION) / 5)
   })
 }
+
+noLetterTile.classlist.add(

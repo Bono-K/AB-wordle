@@ -13350,19 +13350,6 @@ function flipTile(tile, index, array, guess, className) {
 						checkWinLose(guess, array)
 					},
 					{ once: true }
-			no-letter-tile.classList.remove('flip')
-
-			no-letter-tile.dataset.state = className
-			key.classList.add(className)
-
-			if (index === array.length - 1) {
-				no-letter-tile.addEventListener(
-					'transitionend',
-					() => {
-						startInteraction()
-						checkWinLose(guess, array)
-					},
-					{ once: true }
 
 				)
 			}

@@ -13354,7 +13354,6 @@ function flipTile(tile, index, array, guess, className) {
 
 			tile.dataset.state = className
 			key.classList.add(className)
-			noLetterTile.dataset.state = className
 `		`
 			if (index === array.length - 1) {
 				tile.addEventListener(

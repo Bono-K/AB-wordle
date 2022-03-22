@@ -13341,7 +13341,6 @@ function flipTile(tile, index, array, guess, className) {
 			tile.classList.remove('flip')
 			tile.dataset.state = className
 			key.classList.add(className)
-`		`
 			if (index === array.length - 1) {
 				tile.addEventListener(
 					'transitionend',
@@ -13397,7 +13396,6 @@ function checkWinLose(guess, tiles) {
     showAlert(winMessage, null)
     showAlert("Great job! You got it!", 5000)
     danceTiles(tiles)
-//    tiles.win-lose = "true"
     stopInteraction()
     return
   }
@@ -13418,6 +13416,7 @@ function danceTiles(tiles) {
         "animationend",
         () => {
           tile.classList.remove("dance")
+	  tile.classList.add("win-lose")
         },
         { once: true }
       )

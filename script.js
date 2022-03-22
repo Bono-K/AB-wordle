@@ -13161,7 +13161,6 @@ const DANCE_ANIMATION_DURATION = 500
 const keyboard = document.querySelector("[data-keyboard]")
 const alertContainer = document.querySelector("[data-alert-container]")
 const guessGrid = document.querySelector("[data-guess-grid]")
-const noLetterGuessGrid = document.querySelector("[data-noLetterGuessGrid]")
 const offsetFromDate = new Date(2022, 2, 1)
 const msOffset = Date.now() - offsetFromDate
 const dayOffset = msOffset / 1000 / 60 / 60 / 12
@@ -13234,7 +13233,6 @@ function deleteKey() {
 
 function submitGuess() {
 	const activeTiles = [...getActiveTiles()]
-	const activeNoLetterTiles = [...getActiveNoLetterTiles()]
 	if (activeTiles.length !== WORD_LENGTH) {
 		showAlert('Not enough letters')
 		shakeTiles(activeTiles)
@@ -13243,10 +13241,6 @@ function submitGuess() {
 
 	const guess = activeTiles.reduce((word, tile) => {
 		return word + tile.dataset.letter
-	}, '')
-
-	const noLetterGuess = activeNoLetterTiles.reduce((word, noLetterTile) => {
-		return word + noLetterTile.dataset.letter
 	}, '')
 
 	
@@ -13340,14 +13334,11 @@ function flipTile(tile, index, array, guess, className) {
 	setTimeout(() => {
 		tile.classList.add('flip')
 	}, (index * FLIP_ANIMATION_DURATION) / 2)
-
-
 	
 	tile.addEventListener(
 		'transitionend',
 		() => {
 			tile.classList.remove('flip')
-
 			tile.dataset.state = className
 			key.classList.add(className)
 `		`
@@ -13370,11 +13361,6 @@ function flipTile(tile, index, array, guess, className) {
 
 function getActiveTiles() {
   return guessGrid.querySelectorAll('[data-state="active"]')
-}
-
-
-function getActiveNoLetterTiles() {
-  return noLetterGuessGrid.querySelectorAll('[data-state="active"]')
 }
 
 
@@ -13411,6 +13397,7 @@ function checkWinLose(guess, tiles) {
     showAlert(winMessage, null)
     showAlert("Great job! You got it!", 5000)
     danceTiles(tiles)
+    tile.win-lose = "true"
     stopInteraction()
     return
   }

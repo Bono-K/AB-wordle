@@ -13397,7 +13397,7 @@ function checkWinLose(guess, tiles) {
     showAlert(winMessage, null)
     showAlert("Great job! You got it!", 5000)
     danceTiles(tiles)
-    tile.win-lose = "true"
+    tiles.win-lose = "true"
     stopInteraction()
     return
   }

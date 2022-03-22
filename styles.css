@@ -96,6 +96,10 @@ body {
   transition: transform 250ms linear;
 }
 
+.tile [won-lose="true"] {
+  opacity: 0;
+}
+
 .tile[data-state="active"] {
   border-color: hsl(200, 1%, 34%);
 }

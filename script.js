@@ -13428,7 +13428,7 @@ function danceTiles(tiles) {
 		     tile.classList.remove("win-lose")
 	        }, 1000)
 	        tile.classList.add("win-lose")
-          }
+           }
         },
         { once: true }
       )

@@ -13329,9 +13329,6 @@ function submitGuess() {
 	activeTiles.forEach((value, index, array) => {
 		flipTile(value, index, array, guess, classDictionary[index + 1])
 	})
-	activeNoLetterTiles.forEach((value, index, array) => {
-		flipNoLetterTile(value, index, array, guess, classDictionary[index + 1])
-	})
 
 }
 
@@ -13339,7 +13336,6 @@ function submitGuess() {
 function flipTile(tile, index, array, guess, className) {
 	const letter = tile.dataset.letter
 	const key = keyboard.querySelector(`[data-key="${letter}"i]`)
-	const activeNoLetterTiles = getActiveNoLetterTiles()
 	
 	setTimeout(() => {
 		tile.classList.add('flip')

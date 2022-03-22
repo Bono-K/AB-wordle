@@ -97,7 +97,7 @@ body {
 }
 
 .tile.win-lose {
-  opacity: 0;
+  font-size: 0em;
 }
 
 .tile[data-state="active"] {

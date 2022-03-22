@@ -13362,6 +13362,11 @@ function getActiveTiles() {
   return guessGrid.querySelectorAll('[data-state="active"]')
 }
 
+function getAllTiles() {
+  return guessGrid.querySelectorAll()
+}
+
+
 
 function showAlert(message, duration = 1000) {
   const alert = document.createElement("div")
@@ -13409,6 +13414,7 @@ function checkWinLose(guess, tiles) {
 }
 
 function danceTiles(tiles) {
+  const allTiles = guessGrid.querySelectorAll
   tiles.forEach((tile, index) => {
     setTimeout(() => {
       tile.classList.add("dance")
@@ -13416,7 +13422,7 @@ function danceTiles(tiles) {
         "animationend",
         () => {
           tile.classList.remove("dance")
-	  tile.classList.add("win-lose")
+	  allTiles.classList.add("win-lose")
         },
         { once: true }
       )

@@ -13422,11 +13422,13 @@ function danceTiles(tiles) {
         "animationend",
         () => {
           tile.classList.remove("dance")
-	  allTiles.classList.add("win-lose")
+	  allTiles.forEach(tile => {
+                tile.classList.add("win-lose")
 		setTimeout(() => {
-			tile.classList.remove("win-lose")
+		     tile.classList.remove("win-lose")
 	        }, 1000)
-	  allTiles.classList.add("win-lose")
+	        tile.classList.add("win-lose")
+          }
         },
         { once: true }
       )

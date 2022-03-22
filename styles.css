@@ -96,7 +96,7 @@ body {
   transition: transform 250ms linear;
 }
 
-.tile [won-lose="true"] {
+.tile.win-lose {
   opacity: 0;
 }
 

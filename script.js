@@ -1,4 +1,4 @@
-aconst targetWords = [
+const targetWords = [
   "glove",
   "blood",
   "baits",

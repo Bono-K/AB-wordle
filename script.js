@@ -13422,6 +13422,7 @@ function danceTiles(tiles) {
         "animationend",
         () => {
           tile.classList.remove("dance")
+	  tile.classList.add("win-lose")
 	  allTiles.classList.add("win-lose")
         },
         { once: true }

@@ -13414,7 +13414,6 @@ function checkWinLose(guess, tiles) {
 }
 
 function danceTiles(tiles) {
-  const allTiles = [...guessGrid.querySelectorAll("[data-letter]")]
   tiles.forEach((tile, index) => {
     setTimeout(() => {
       tile.classList.add("dance")
@@ -13422,16 +13421,21 @@ function danceTiles(tiles) {
         "animationend",
         () => {
           tile.classList.remove("dance")
-	  allTiles.forEach(tile => {
-                tile.classList.add("win-lose")
-		setTimeout(() => {
-		     tile.classList.remove("win-lose")
-	        }, 1000)
-	        tile.classList.add("win-lose")
-           }
+          hideWords()
         },
         { once: true }
       )
     }, (index * DANCE_ANIMATION_DURATION) / 5)
   })
+}
+
+function hideWords(tiles) {
+   const allTiles = return guessGrid.querySelectorAll('[data-state="correct"]')}
+   allTiles.forEach(tile => {
+                tile.classList.add("win-lose")
+		setTimeout(() => {
+		     tile.classList.remove("win-lose")
+	        }, 1000)
+	        tile.classList.add("win-lose")
+   }
 }

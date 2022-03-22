@@ -13414,7 +13414,7 @@ function checkWinLose(guess, tiles) {
 }
 
 function danceTiles(tiles) {
-  const allTiles = guessGrid.querySelectorAll()
+  const allTiles = guessGrid.querySelectorAll("[data-letter]")
   tiles.forEach((tile, index) => {
     setTimeout(() => {
       tile.classList.add("dance")

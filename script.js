@@ -13430,12 +13430,16 @@ function danceTiles(tiles) {
 }
 
 function hideWords(tiles) {
-   const allTiles = guessGrid.querySelectorAll('[data-state="correct"]')
-   allTiles.forEach(tile => {
+   const allCorrectTiles = guessGrid.querySelectorAll('[data-state="correct"]')
+   const allWrongTiles = guessGrid.querySelectorAll('[data-state="wrong"]')
+   const allWrongLTiles = guessGrid.querySelectorAll('[data-state="wrong-location"]')
+   allCorrectTiles.push(allWrongTiles)
+   allCorrectTiles.push(allWrongLTiles)
+   allCorrectTiles.forEach(tile => {
                 tile.classList.add("win-lose")
 		setTimeout(() => {
 		     tile.classList.remove("win-lose")
-	        }, 1000)
+	        }, 10000)
 	        tile.classList.add("win-lose")
    })
 }

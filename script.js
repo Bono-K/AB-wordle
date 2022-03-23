@@ -13427,6 +13427,7 @@ function checkWinLose(guess, tiles) {
   if (remainingTiles.length === 0) {
     showAlert(winMessage, null)
     showAlert(targetWord.toUpperCase(), null)
+    hideWords() 
     stopInteraction()
   }
 }

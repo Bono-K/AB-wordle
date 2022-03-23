@@ -13433,8 +13433,8 @@ function hideWords(tiles) {
    const allCorrectTiles = [...guessGrid.querySelectorAll('[data-state="correct"]')]
    const allWrongTiles = [...guessGrid.querySelectorAll('[data-state="wrong"]')]
    const allWrongLTiles = [...guessGrid.querySelectorAll('[data-state="wrong-location"]')]
-   allCorrectTiles.push(allWrongTiles)
-   allCorrectTiles.push(allWrongLTiles)
+   allCorrectTiles.push(...allWrongTiles)
+   allCorrectTiles.push(...allWrongLTiles)
    allCorrectTiles.forEach(tile => {
                 tile.classList.add("win-lose")
 		setTimeout(() => {

@@ -13437,5 +13437,5 @@ function hideWords(tiles) {
 		     tile.classList.remove("win-lose")
 	        }, 1000)
 	        tile.classList.add("win-lose")
-   }
+   })
 }

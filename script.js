@@ -13441,9 +13441,9 @@ function hideWords(tiles) {
 	        }, 1000) 
 		setTimeout(() => {
 		     tile.classList.remove("win-lose")
-	        }, 5000)
+	        }, 2000)
 		setTimeout(() => {
 		     tile.classList.add("win-lose")
-	        }, 3000)
+	        }, 2000)
    })
 }

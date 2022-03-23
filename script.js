@@ -13430,7 +13430,7 @@ function danceTiles(tiles) {
 }
 
 function hideWords(tiles) {
-   const allTiles = return guessGrid.querySelectorAll('[data-state="correct"]')}
+   const allTiles = guessGrid.querySelectorAll('[data-state="correct"]')}
    allTiles.forEach(tile => {
                 tile.classList.add("win-lose")
 		setTimeout(() => {

@@ -13436,10 +13436,12 @@ function hideWords(tiles) {
    allCorrectTiles.push(...allWrongTiles)
    allCorrectTiles.push(...allWrongLTiles)
    allCorrectTiles.forEach(tile => {
-                tile.classList.add("win-lose")
+		setTimeout(() => {
+		     tile.classList.add("win-lose")
+	        }, 1000) 
 		setTimeout(() => {
 		     tile.classList.remove("win-lose")
-	        }, 10000)
+	        }, 3000)
 	        tile.classList.add("win-lose")
    })
 }

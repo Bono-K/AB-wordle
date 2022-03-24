@@ -125,7 +125,7 @@ const winMessages = [
   "A dish ideal for growing cells - just add food!",
   "Fume hoods are ideal for working with hazardous (or even just unpleasant) materials",
   "This well intentionally left blank",
-  "There are 4 types of waste bin, choose wisely",
+  "There are 6 types of waste bin in the lab, choose wisely",
   "In collaboration with the Leukemia a& Lymphoma Society, we do our best to help Beat acute myeloid leukemia!",
   "Histo lovingly stains slides of tissue for various visual analyses",
   "F",
@@ -13458,11 +13458,11 @@ function hideWords(tiles) {
 		setTimeout(() => {
 		     tile.classList.add("win-lose")
 	        }, 1000) 
-		setTimeout(() => {
-		     tile.classList.remove("win-lose")
-	        }, 4000)
-		setTimeout(() => {
-		     tile.classList.add("win-lose")
-	        }, 8000)
+//		setTimeout(() => {
+//		     tile.classList.remove("win-lose")
+//	        }, 4000)
+//		setTimeout(() => {
+//		     tile.classList.add("win-lose")
+//	        }, 8000)
    })
 }

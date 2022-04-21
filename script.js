@@ -13337,7 +13337,7 @@ function shakeTiles(tiles) {
 
 function checkWinLose(guess, tiles) {
   if (guess === targetWord) {
-    showAlert("Great job! You got it!", null)
+    showAlert("Great job! You got it!", 2000)
     danceTiles(tiles)
     stopInteraction()
     return

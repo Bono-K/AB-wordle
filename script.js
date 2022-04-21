@@ -1,146 +1,44 @@
 const targetWords = [
-  "glove",
-  "blood",
-  "baits",
-  "noise",
-  "block",
-  "tubes",
-  "cells",
-  "tumor",
-  "tapes",
-  "picos",
-  "ribos",
-  "email",
-  "slack",
-  "codon",
-  "asset",
-  "bravo",
-  "water",
-  "timer",
-  "flask",
-  "hiseq",
-  "scale",
-  "myone",
+  "build",
+  "level",
+  "kongs",
+  "board",
+  "kilts",
+  "steam",
+  "pixel",
+  "arena",
+  "crime",
+  "queue",
+  "lines",
+  "horse",
+  "woods",
+  "sneak",
+  "trade",
+  "quest",
+  "daisy",
+  "tails",
+  "sonic",
+  "elden",
+  "eevee",
+  "heavy",
+  "tanks",
+  "sword",
+  "shell",
+  "cards",
+  "yoshi",
+  "wario",
+  "mario",
+  "peach",
+  "zelda",
+  "plays",
+  "magic",
+  "stats",
+  "heals",
+  "pinny",
+  "penny",
   "badge",
-  "sperm",
-  "qubit",
-  "ruler",
-  "dnase",
-  "helix",
-  "dimer",
-  "lysis",
-  "probe",
-  "histo",
-  "zebra",
-  "bench",
-  "beads",
-  "veeva",
-  "coats",
-  "batch",
-  "petri",
-  "hoods",
-  "blank",
-  "waste",
-  "beats",
-  "stain",
-  "mixes",
-  "yield",
-  "tests",
-  "quant",
-  "draws",
-  "smear",
-  "locus",
-  "otter",
-  "query",
-  "snips",
-  "genes",
-  "laser",
-  "holds",
-  "ethyl",
-  "gauze",
-  "audit",
-  "fedex",
-  "print",
-  "scans",
-  "label",
-  "slide",
-  "liver",
-  "nasal",
-  "image",
-  "roche",
-
-]
-
-const winMessages = [
-  "Wear your lab PPE!",
-  "An accepted sample type for F1H and F1L processing",
-  "The workhorse at Hybrid Capture. Grab those target genes!",
-  "A confounding factor at CBO analysis",
-  "Tissue suspended in a parafilm, histo slices curls for F1/F1H analysis!",
-  "Collection device for numerous sample types",
-  "Life's building blocks (and/or a matrix type that requires a PDA to extract)",
-  "Mutated cells that grow out of control",
-  "F1L Extraction uses the Tapestation (which runs screen tapes) to quantify extracted material",
-  "Picogreen is the quantification assay of choice for F1 extraction, F1 HCQC, and F1L LC/HCQC",
-  "Ribogreen is the quantification assay of choice for F1 RNA extraction",
-  "You know it, you love it, you get 100s every day, it's email!",
-  "AOL IM of the modern, corporate era",
-  "A triumvirate of DNA/RNA bases",
-  "All lab instruments get unique asset IDs",
-  "Agilent's Bravo system is a much beloved/maligned liquid handler in the Cambridge lab",
-  "We're a lab, of course we need water!",
-  "Precision is essential in all things, especially incubation times in the lab!",
-  "A cup, but make it fashion: Erlenmeyer flasks are great for measuring and storing solutions",
-  "Our senior sequencing instruments for the F1 lab",
-  "Measure twice, pour once!",
-  "Magnetic beads used in the Hybrid Capture protocol",
-  "Your key to the kingdom! Or lab space, either way",
-  "Somehow, salmon sperm is an essential ingredient in the hybrid capture process… It helps us target only the genes we want!",
-  "Qubit is the control for our RNA extraction quantification process",
-  "Measure twice, transcribe once!",
-  "DNase is an enzyme that breaks down DNA. Keep it away from the samples, please!",
-  "The wiggly structure of DNA",
-  "The enemy when attempting add primers to samples - primer dimers are primer molecules that attach to other primer molecules, leaving the sample out!",
-  "Lysis occurs when a cell's outer membrane is broken and the cell disintegrates, sending its constituent organelles and bits into the ether",
-  "Probes are a molecular tag attached to a target DNA sequence, usually to quantify or identify the sequence",
-  "Our beloved Histology department, cutting and analyzing FFPE block samples!",
-  "OK, kind of a stretch, but this is the type of printer we use for plate labels",
-  "Where the science happens!",
-  "Magnetic beads are used to hold DNA in place on a magnet while everything else is washed away",
-  "A beloved controlled documents platform",
-  "Wear your lab PPE!",
-  "The overarching identifier for all processes run on a plate of samples",
-  "A dish ideal for growing cells - just add food!",
-  "Fume hoods are ideal for working with hazardous (or even just unpleasant) materials",
-  "This well intentionally left blank",
-  "There are 4 types of waste bin, choose wisely",
-  "In collaboration with the Leukemia a& Lymphoma Society, we do our best to help Beat acute myeloid leukemia!",
-  "Histo lovingly stains slides of tissue for various visual analyses",
-  "Save yourself from pipetting numerous tubes of the same mixture, make a master mix!",
-  "A measure of DNA in solution, necessary to standardize the concentrations of your samples",
-  "We run those!",
-  "Quantification is the step of measuring the amount of DNA/RNA in solution",
-  "It takes a skilled hand to do a good blood draw",
-  "Making a good blood smear on a slide is a fine art, and necessary for Histo to effectively examine it!",
-  "The chromosomal coordinates of a target gene",
-  "CompBio's self-audit workflow for analyzing sequenced data",
-  "CompBio queries the SQL database for genetic analysis data",
-  "A single nucleotide used by CompBio to distinguish between target and bait sequencing data",
-  "A DNA sequence that expresses as a particular trait",
-  "An important tool when measuring sample yield via fluorescence!",
-  "Samples that have been received but are pending issue resolution",
-  "A chemistry term to describe molecular structure, or a prefix to denote some good alcohol",
-  "Useful for bandaging wounds as well as keeping a tidy lab!",
-  "From CompBio auditing its own work to verify it is correct to oversight groups coming in to ensure our process is up to snuff, we have to stay audit-ready!",
-  "One of our sample couriers, through thick and thin",
-  "From paperwork to sample stickers, a lot of printing goes on around here",
-  "Accessioning meticulously scans piles of paperwork for our received samples",
-  "Careful labelling practices keeps our sample integrity safe",
-  "A transport medium for the storage and analysis of all kinds of tiny tissue -- solid or liquid!",
-  "A common site for cancer growth",
-  "A rare yet dangerous site for cancer growth",
-  "Maintaining a digital scan or picture of documents and samples is essential for traceability",
-  "FMI's parent company",
+  "score",
+  "games",
 ]
 
 const dictionary = [
@@ -226,7 +124,6 @@ const dictionary = [
   "nasal",
   "image",
   "roche",
-
   "aahed",
   "aalii",
   "aargh",
@@ -13207,9 +13104,6 @@ const DANCE_ANIMATION_DURATION = 500
 const keyboard = document.querySelector("[data-keyboard]")
 const alertContainer = document.querySelector("[data-alert-container]")
 const guessGrid = document.querySelector("[data-guess-grid]")
-const offsetFromDate = new Date(2022, 3, 1)
-const msOffset = Date.now() - offsetFromDate
-const dayOffset = msOffset / 1000 / 60 / 60 / 12
 const targetWord = targetWords[Math.floor(Math.random() * targetWords.length)]
 
 startInteraction()
@@ -13443,8 +13337,7 @@ function shakeTiles(tiles) {
 
 function checkWinLose(guess, tiles) {
   if (guess === targetWord) {
-    showAlert(winMessage, null)
-    showAlert("Great job! You got it!", 5000)
+    showAlert("Great job! You got it!", null)
     danceTiles(tiles)
     stopInteraction()
     return
@@ -13452,9 +13345,7 @@ function checkWinLose(guess, tiles) {
 
   const remainingTiles = guessGrid.querySelectorAll(":not([data-letter])")
   if (remainingTiles.length === 0) {
-    showAlert(winMessage, null)
     showAlert(("Uh-oh, better luck next time! The word was " +targetWord.toUpperCase()), null)
-    hideWords() 
     stopInteraction()
   }
 }
@@ -13467,7 +13358,6 @@ function danceTiles(tiles) {
         "animationend",
         () => {
           tile.classList.remove("dance")
-          hideWords()
         },
         { once: true }
       )

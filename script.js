@@ -1,6 +1,6 @@
 const targetWords = [
-  "birdo"
-  "luigi"
+  "birdo",
+  "luigi",
   "build",
   "level",
   "kongs",

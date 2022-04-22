@@ -39,12 +39,17 @@ const targetWords = [
   "badge",
   "score",
   "games",
+  "login",
+  "kirby",
+  "ranks",
+  "gamer",
 ]
 
 const dictionary = [
   "build",
   "level",
   "kongs",
+  "kirby",
   "board",
   "kilts",
   "steam",

@@ -1,4 +1,6 @@
 const targetWords = [
+  "birdo"
+  "luigi"
   "build",
   "level",
   "kongs",
@@ -48,6 +50,8 @@ const targetWords = [
 const dictionary = [
   "build",
   "level",
+  "birdo",
+  "luigi",
   "kongs",
   "kirby",
   "board",

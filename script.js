@@ -86,6 +86,7 @@ const targetWords = [
   "water",
   "sleep",
   "otaku",
+  "power",
 ]
 
 const dictionary = [
